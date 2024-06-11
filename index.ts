@@ -66,4 +66,44 @@ export interface BallotResult {
     votes: number;
 }
 
+export interface CampusRoom {
+    roomName: string;
+    json: string;
+}
+
+export interface Campus {
+    school_id: number;
+    school_name: string;
+    rooms: CampusRoom[];
+}
+
+export interface MemberCert {
+    degree_id: number;
+    date: string;
+    name: string;
+    school: string;
+}
+
+export interface Citation {
+    id?: number;
+    person_id?: number;
+    category_id: number;
+    description?: string;
+    date?: string;
+    points?: number;
+    status?: string;
+    created_at?: string;
+    entered_by_id?: number;
+}
+
+export interface CitationCategory {
+    id: number;
+    description: string;
+    inactive: boolean;
+    min: number;
+    max: number;
+}
+
+export type Update = Record<string, unknown>;
+
 export default null;
