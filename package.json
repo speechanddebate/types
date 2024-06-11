@@ -1,0 +1,44 @@
+{
+    "name": "types",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "NSDA Typescript Types",
+    "main": "index.ts",
+    "scripts": {
+        "build": "tsc",
+        "lint": "eslint **/*.ts* --max-warnings 0",
+        "format": "prettier --write",
+        "format-check": "prettier --check",
+        "test": "vitest watch",
+        "test-silent": "vitest --silent",
+        "test-cover": "vitest --coverage",
+        "test-ci": "vitest --run",
+        "prepare": "husky"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/speechanddebate/types.git"
+    },
+    "author": "Aaron Hardy <aaron.hardy@speechanddebate.org> (https://speechanddebate.org)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/speechanddebate/types/issues"
+    },
+    "homepage": "https://github.com/speechanddebate/types#readme",
+    "devDependencies": {
+        "@speechanddebate/eslint-config-nsda": "git+https://github.com/speechanddebate/eslint-config-nsda.git#v2",
+        "@typescript-eslint/parser": "^7.6.0",
+        "chai": "^5.1.0",
+        "eslint": "^8.57.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-import-resolver-typescript": "^3.6.1",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-jest": "^27.9.0",
+        "globals": "^14.0.0",
+        "husky": "^9.0.11",
+        "prettier": "3.2.5",
+        "typescript": "^5.2.2",
+        "typescript-eslint": "^7.1.1"
+    }
+}
