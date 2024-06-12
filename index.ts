@@ -1,109 +1,73 @@
-export interface District {
-    id: number;
-    name: string;
-}
-
-export interface Category {
-    id: number;
-    description: string;
-    type: string;
-    hs: boolean;
-    ms: boolean;
-    ranked: boolean;
-}
-
-export interface Honor {
-    honor_id: number;
-    tag: string;
-    description: string;
-    type: string;
-}
-
-export interface Ranking {
-    name?: string;
-    school?: string;
-    state?: string;
-    strength?: number;
-    points?: number;
-}
-
-export interface FetchOptions extends RequestInit {
-    maxRetries?: number;
-    retryDelay?: number;
-    // method?: string;
-    // credentials?: string;
-    // headers?: Record<string, string>;
-    // body?: string | Record<string, unknown> | Record<string, unknown>[];
-}
-
-export interface ResponseError extends Error {
-    statusCode?: number;
-}
-
-export interface Ballot {
-    id: number;
-    type: string;
-    description: string;
-    instructions: string;
-    realm: string;
-    start: string;
-    end: string;
-    created_at?: string;
-    created_by_id?: number;
-    votes?: number;
-    voters_person?: number;
-    voters_school?: number;
-}
-
-export interface Vote {
-    ballot_option_id: number;
-    vote: number;
-    school_id?: number;
-}
-
-export interface BallotResult {
-    ballot_option_id: number;
-    votes: number;
-}
-
-export interface CampusRoom {
-    roomName: string;
-    json: string;
-}
-
-export interface Campus {
-    school_id: number;
-    school_name: string;
-    rooms: CampusRoom[];
-}
-
-export interface MemberCert {
-    degree_id: number;
-    date: string;
-    name: string;
-    school: string;
-}
-
-export interface Citation {
-    id?: number;
-    person_id?: number;
-    category_id: number;
-    description?: string;
-    date?: string;
-    points?: number;
-    status?: string;
-    created_at?: string;
-    entered_by_id?: number;
-}
-
-export interface CitationCategory {
-    id: number;
-    description: string;
-    inactive: boolean;
-    min: number;
-    max: number;
-}
-
-export type Update = Record<string, unknown>;
-
-export default null;
+export type { default as Address } from './src/Address.js';
+export type { default as AutopointEntry } from './src/AutopointEntry.js';
+export type { default as Ballot } from './src/Ballot.js';
+export type { default as BallotOption } from './src/BallotOption.js';
+export type { default as BallotResult } from './src/BallotResult.js';
+export type { default as Campus } from './src/Campus.js';
+export type { default as Citation } from './src/Citation.js';
+export type { default as CitationCategory } from './src/CitationCategory.js';
+export type { default as City } from './src/City.js';
+export type { default as District } from './src/District.js';
+export type { default as DistrictDate } from './src/DistrictDate.js';
+export type { default as DistrictInfo } from './src/DistrictInfo.js';
+export type { default as DistrictLeader } from './src/DistrictLeader.js';
+export type { default as DistrictSchool } from './src/DistrictSchool.js';
+export type { default as DistrictTrophyWinner } from './src/DistrictTrophyWinner.js';
+export type { default as EmmaGroup } from './src/EmmaGroup.js';
+export type { default as Err } from './src/Err.js';
+export type * from './src/Fetch.js';
+export type { default as Grant } from './src/Grant.js';
+export type { default as HonorType } from './src/HonorType.js';
+export type { default as Interaction } from './src/Interaction.js';
+export type { default as Invoice } from './src/Invoice.js';
+export type { default as InvoiceItem } from './src/InvoiceItem.js';
+export type { default as LogError } from './src/LogError.js';
+export type { default as MemberAnalytics } from './src/MemberAnalytics.js';
+export type { default as MemberCert } from './src/MemberCert.js';
+export type { default as MemberDistrictLeadership } from './src/MemberDistrictLeadership.js';
+export type { default as MemberEmma } from './src/MemberEmma.js';
+export type { default as MemberHonor } from './src/MemberHonor.js';
+export type { default as MemberInteraction } from './src/MemberInteraction.js';
+export type { default as MemberLearn } from './src/MemberLearn.js';
+export type { default as MemberMeta } from './src/MemberMeta.js';
+export type { default as MemberPermissions } from './src/MemberPermissions.js';
+export type { default as MemberPurchases } from './src/MemberPurchases.js';
+export type { default as MemberRole } from './src/MemberRole.js';
+export type { default as MemberSubscription } from './src/MemberSubscription.js';
+export type { default as MemberTag } from './src/MemberTag.js';
+export type { default as NCESSchool } from './src/NCESSchool.js';
+export type { default as NewPerson } from './src/NewPerson.js';
+export type { default as NFHSStatus } from './src/NFHSStatus.js';
+export type { default as PasswordChange } from './src/PasswordChange.js';
+export type { default as Person } from './src/Person.js';
+export type { default as PersonLink } from './src/PersonLink.js';
+export type { default as PersonRanking } from './src/PersonRanking.js';
+export type { default as Point } from './src/Point.js';
+export type { default as PointCategory } from './src/PointCategory.js';
+export type { default as PointEntry } from './src/PointEntry.js';
+export type { default as Report } from './src/Report.js';
+export type { default as Result } from './src/Result.js';
+export type { default as School } from './src/School.js';
+export type { default as SchoolGrant } from './src/SchoolGrant.js';
+export type { default as SchoolHonor } from './src/SchoolHonor.js';
+export type { default as SchoolInvoices } from './src/SchoolInvoices.js';
+export type { default as SchoolMember } from './src/SchoolMember.js';
+export type { default as SchoolMeta } from './src/SchoolMeta.js';
+export type { default as SchoolPermission } from './src/SchoolPermission.js';
+export type { default as SchoolPortal } from './src/SchoolPortal.js';
+export type { default as SchoolPrice } from './src/SchoolPrice.js';
+export type { default as SchoolRanking } from './src/SchoolRanking.js';
+export type { default as SchoolSubscription } from './src/SchoolSubscription.js';
+export type { default as SchoolTag } from './src/SchoolTag.js';
+export type { default as SearchResult } from './src/SearchResult.js';
+export type { default as Session } from './src/Session.js';
+export type { default as SessionRequest } from './src/SessionRequest.js';
+export type { default as TabroomHistory } from './src/TabroomHistory.js';
+export type { default as Tournament } from './src/Tournament.js';
+export type { default as TournamentEvent } from './src/TournamentEvent.js';
+export type { default as Update } from './src/Update.js';
+export type { default as Username } from './src/Username.js';
+export type { default as UsernameUpdate } from './src/UsernameUpdate.js';
+export type { default as VirtuousProfile } from './src/VirtuousProfile.js';
+export type { default as VirtuousWebhook } from './src/VirtuousWebhook.js';
+export type { default as Vote } from './src/Vote.js';
